@@ -1,31 +1,25 @@
-const newCommentHandler = async (event) => {
+const commentFormHandler = async function (event) {
+	event.preventDefault();
 
-    const description = document.querySelector('#comment-desc').value.trim();
-    const dataElement = document.getElementById('blogpost-id');
-    var blogpost_id = dataElement.getAttribute('data-id');
-    console.log(blogpost_id);
-    if (description) {
-        await fetch("/api/comments", {
-            method: 'POST',
-            body: JSON.stringify({ description, blogpost_id,
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        .then((response) => {
-            if (response.ok) {
-                fetch('/api/blogposts/' + blogpost_id, {
-                    method: 'GET',
-                });
-                window.location.reload();
-            } else {
-                alert('Failed to create comment');
-            } 
-        })
-        
-    }
-}
+	const blog_id = document.querySelector('.new-comment-form').dataset.blogid;
+
+	const comment_description = document.querySelector('#comment_description').value.trim();
+
+	if (comment_description) {
+		await fetch('/api/comments', {
+			method: 'POST',
+			body: JSON.stringify({
+				blog_id,
+				comment_description,
+			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+		document.location.reload();
+	}
+};
+
 document
-    .querySelector('.new-comment-form')
-    .addEventListener('submit', newCommentHandler);
+	.querySelector('.new-comment-form')
+	.addEventListener('submit', commentFormHandler);

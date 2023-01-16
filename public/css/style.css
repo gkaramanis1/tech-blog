@@ -1,10 +1,5 @@
-header, .blogpost-header, .blogpost:not(:last-child) {
-    background-size: cover;
-    background-color: #000000;
-}
-
 body {
-    color: rgb(255, 255, 255);
+    background-color: #d0e3ea;
 }
 
 header h1 {
@@ -49,6 +44,7 @@ nav a:hover {
 
 .blogpost-desc p {
     margin: 20px;
+    color: black;
 }
 
 .no-button {
@@ -56,49 +52,18 @@ nav a:hover {
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #ffffff;
+    color: #808080;
     text-decoration: none;
     font-size: 100%;
-    margin: 1rem 2rem 1rem 2rem;
+    margin: 23px;
     text-decoration: none;
 }
 
 .no-button:hover {
-    color: #0077ffb4;;
-}
-
-.blogpost-name-link {
-    color: #ffffff;
-}
-
-.blogpost-name-link:hover {
-    text-decoration: none;
     color: #0077ffb4;
 }
 
-.blogpost-name-not-link {
-    color: #ffffff;
-}
-
-#blogpost-id {
-    display: none;
-}
-
-.user-blogpost-names-list-item {
-    background-color: #ffffff;
-    color: black;
-    border: solid 2px black;
-}
-
-.user-blogpost-names-list-item-link {
-    margin: 1rem 2rem 1rem 2rem;
-    color: #000000;
-}
-
-.user-blogpost-names-list-item-link:hover {
-    color: #0077ffb4;
-    text-decoration: none;
-}
-textarea {
-    width: 99%
+.form-input {
+    margin: 10px;
+    padding: 23px;
 }

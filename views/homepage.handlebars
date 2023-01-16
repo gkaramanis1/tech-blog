@@ -1,23 +1,30 @@
-{{#each blogposts as |blogpost|}}
+{{#each blogs as |blog|}}
 
-  <div class="col-md-12 mb-4 project">
-    <div class="row mt-4 blogpost-header">
-      <div class="col-md-6">
+  <div class="row">
+
+    <div class="container blogBox">
+			<div class="row  justify-content-center headerRow">
+      <div class="col-8">
         <h2>
-          <a class="blogpost-name-link" href="/api/blogposts/{{blogpost.id}}">{{blogpost.name}}</a>
+          <a class="blogTitle text-uppercase" href="/blog/{{blog.id}}">{{blog.title}}</a>
         </h2>
       </div>
-      <div class="col-md-6 created-by">
-        <p>Created by
-          {{blogpost.user.name}}
+
+      <div class="col-4">
+        <p class="blogCreate text-right">Created by
+          {{blog.user.username}}
           on
-          {{format_date blogpost.date_created}}</p>
+          {{format_date blog.date_created}}
+        </p>
       </div>
-    </div>
-        <div class="row blogpost-desc">
-      <p>
-        {{blogpost.description}}
+			</div>
+    <div class="blogDesc">
+      <p class="text-center blogDescMain">
+        {{blog.description}}
       </p>
     </div>
+    </div>
+
   </div>
+
 {{/each}}
