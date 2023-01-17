@@ -8,7 +8,7 @@
 
 ## Description
 This is a CMS-style blog site that is used to publish articles, blog posts, and my thoughts and opinions.
-![Tech Blog](/public/images/screenshot.png?raw=true "Tech Blog Screenshot")
+![Tech Blog](/public/images/tech-blog-screenshot.png "Tech Blog Screenshot")
 
 ## Installation
 run npm i to install packages required for this applications.
